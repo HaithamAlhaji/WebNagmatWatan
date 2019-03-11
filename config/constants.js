@@ -1,6 +1,6 @@
 module.exports = {
   ExpressServer: {
-    Port: process.env.Port || 4500
+    Port: process.env.PORT || 4500
   },
   Defaults: {
     style: "default",
