@@ -1,0 +1,28 @@
+{
+  "name": "nagmat-watan",
+  "version": "1.0.0",
+  "description": "Nagmat Watan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaithamThamer/WebNagmatWatan.git"
+  },
+  "author": "Haitham Alhaji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaithamThamer/WebNagmatWatan/issues"
+  },
+  "homepage": "https://github.com/HaithamThamer/WebNagmatWatan#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "i18n-express": "^1.1.3",
+    "mysql": "^2.16.0"
+  }
+}
