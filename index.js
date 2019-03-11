@@ -10,6 +10,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const mysql = require("mysql");
 const bodyParser = require("body-parser");
+const favicon = require("serve-favicon");
 
 // set defaults values from constants.js file
 var Defaults = {
@@ -79,6 +80,6 @@ app.set("bodyParser", bodyParser);
 app.use("/", home);
 app.use("/admin", admin);
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use(favicon(path.join(__dirname, "public", "img", "favicon.ico")));
 //
 app.listen(constants.ExpressServer.Port);
