@@ -3,9 +3,9 @@ const constants = require("./config/constants");
 const express = require("express");
 const expressHandlebars = require("express-handlebars");
 const path = require("path");
-const admin = require("./routers/home/index");
-const home = require("./routers/admin/index");
-//const il8n = require("il8n-express");
+const home = require("./routers/home/index");
+const admin = require("./routers/admin/index");
+const i18n = require("i18n-express");
 const session = require("express-session");
 const flash = require("connect-flash");
 const mysql = require("mysql");
@@ -27,13 +27,13 @@ const mysqlConnection = mysql.createConnection({
   password: constants.mysql.password,
   database: constants.mysql.database
 });
-mysqlConnection.connect();
-mysqlConnection.query("select 1", (errors, results, fields) => {
-  if (errors) {
-    throw errors;
-  } else {
-  }
-});
+// mysqlConnection.connect();
+// mysqlConnection.query("select 1", (errors, results, fields) => {
+//   if (errors) {
+//     throw errors;
+//   } else {
+//   }
+// });
 
 //initilize global variables
 app.set("defaultStyle", Defaults.style);
@@ -62,7 +62,16 @@ app.use(
 app.use(flash());
 
 // i18n languages
-
+app.use(
+  i18n({
+    translationsPath: path.join(__dirname, "public/lang"),
+    cookieLangName: "ulang",
+    browserEnable: false,
+    defaultLang: "ar",
+    paramLangName: "clang",
+    siteLangs: ["en", "ar", "ku"]
+  })
+);
 // uses
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -70,12 +79,6 @@ app.set("bodyParser", bodyParser);
 app.use("/", home);
 app.use("/admin", admin);
 app.use(express.static(path.join(__dirname, "public")));
-
-//
-app.get("/", (req, res, next) => {
-  res.send("Hi");
-  next();
-});
 
 //
 app.listen(constants.ExpressServer.Port);

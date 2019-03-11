@@ -6,6 +6,8 @@ router.all("*", (req, res, next) => {
   next();
 });
 router.get("/", (req, res, next) => {
-  res.render("home/index", {});
+  res.render("home/index", {
+    defaultStyle: req.app.get("defaultStlye")
+  });
 });
 module.exports = router;
