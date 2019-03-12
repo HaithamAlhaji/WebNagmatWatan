@@ -4330,10 +4330,10 @@ body.is-loading #banner:before {
 /* Footer */
 
 #footer {
-  background-color: #f64747;
+  background-color: #42a9ce;
   color: #fdd1d1;
   padding: 6em 0 4em 0;
-  background: #f64747;
+  background: #105190;
 }
 
 #footer input,
@@ -4598,10 +4598,24 @@ body.is-loading #banner:before {
   margin: 0px auto;
   border: none;
 }
-#logoTitle {
-  font-size: 80px;
+
+#logoText {
+  font-size: 80px !important;
+  margin-bottom: 0px !important;
+
+}
+@media screen and (max-width: 500px) {
+  #logoText {
+    font-size: 40px !important;
+    text-align: center !important;
+    margin-bottom: 0px !important;
+  }
+  #logo {
+    height: 150px;
+  }
 }
 #logoTitle > p {
+  text-align: justify;
   font-size: 14px;
 }
 #logoFooter {
@@ -4618,7 +4632,7 @@ body.is-loading #banner:before {
 }
 .sponsorImg {
   height: 100px;
-  
+
   background-repeat: no-repeat;
   background-clip: content-box;
   background-origin: content-box;
