@@ -81,6 +81,6 @@ app.use("/", home);
 app.use("/admin", admin);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "favicon.ico")));
-console.log(constants.ExpressServer.Port);
+
 //
 app.listen(constants.ExpressServer.Port);
