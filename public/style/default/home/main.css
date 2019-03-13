@@ -3639,7 +3639,7 @@ body.subpage {
   -ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
   transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
   -webkit-overflow-scrolling: touch;
-  background: #f64242;
+  background: #105190;
   box-shadow: none;
   color: #ffffff;
   height: 100%;
@@ -4331,7 +4331,7 @@ body.is-loading #banner:before {
 
 #footer {
   background-color: #42a9ce;
-  color: #fdd1d1;
+  color: white;
   padding: 6em 0 4em 0;
   background: #105190;
 }
