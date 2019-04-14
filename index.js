@@ -28,13 +28,6 @@ const mysqlConnection = mysql.createConnection({
   password: constants.mysql.password,
   database: constants.mysql.database
 });
-// mysqlConnection.connect();
-// mysqlConnection.query("select 1", (errors, results, fields) => {
-//   if (errors) {
-//     throw errors;
-//   } else {
-//   }
-// });
 
 //initilize global variables
 app.set("defaultStyle", Defaults.style);
