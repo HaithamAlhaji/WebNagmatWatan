@@ -1,6 +1,9 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 module.exports = {
   ExpressServer: {
-    Port: process.env.PORT || process.env.PORT
+    Port: process.env.PORT || process.env.express_port
   },
   Defaults: {
     style: "default",
